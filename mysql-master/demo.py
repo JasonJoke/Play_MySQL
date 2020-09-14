@@ -4,7 +4,6 @@ import datetime, time
 import os
 import xlrd
 
-
 path = './analysis_module/'
 all_file = os.listdir(path)
 for name in all_file:
@@ -21,7 +20,7 @@ for name in all_file:
         num = workbook.nsheets
         # 写入数据库
         conn = pymysql.connect(host='10.16.31.77', user='root', password='AutoTest', port=3306,
-                               database="chart_demo",charset='utf8')
+                               database="chart_demo", charset='utf8')
 
         # cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         cursor = conn.cursor()
